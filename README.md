@@ -1,4 +1,4 @@
-# CSC220 Foudnations of Computer Science: Expression Compiler
+# CSC220 Foundations of Computer Science: Expression Compiler
 
 ## Project Summary
 This project is a Java-based compiler  designed to process mathematical expressions through the core phases of compilation. It simulates how modern compilers break down instructions by implementing lexical analysis, recursive descent parsing, and abstract syntax tree generation.
@@ -11,6 +11,9 @@ The system takes a string input (e.g., `(3+2)*5-1`), validates its syntax agains
 * **AST Generation:** Constructs an Expression Tree to represent the operation hierarchy.
 * **Support of negative numbers:** Capable of handling negative numbers (e.g., `-3`).
 * **Error Handling**
+
+## Constraints
+This program is meant to run on integers only for memory. Divisions that result in non integer solutions get recorded as the floor function.
 
 
 ## Run program
