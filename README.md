@@ -59,3 +59,99 @@ or
 2. Assessment of valid syntax
 3. Expression tree visualization
 4. Final result evaluated numerically
+
+
+
+
+
+
+
+
+CSC220 Foundations of Computer Science  
+Mini Expression Compiler
+
+Project Summary
+
+This project is a Java-based mini compiler that processes mathematical expressions through the core phases of compilation. It simulates how modern compilers analyze and evaluate expressions using:
+
+• Lexical Analysis  
+• Recursive Descent Parsing  
+• Abstract Syntax Tree (AST) Construction  
+• Expression Evaluation  
+
+The system takes a string input (e.g., (3+2)*5-1), validates its syntax using a context-free grammar, constructs an AST to represent operator precedence, and evaluates the final result.
+
+---------------------------------------
+
+Features
+
+Lexical Analysis  
+Converts raw input strings into structured tokens such as:
+- Numbers
+- Operators (+, -, *, /)
+- Parentheses
+
+Recursive Descent Parsing  
+Validates input using a mathematical grammar structure:
+
+Expression → Term  
+Term → Factor  
+Factor → Number | (Expression)
+
+AST Generation  
+Builds an Expression Tree that preserves operator precedence and hierarchy.
+
+Unary Minus Support  
+Handles negative numbers (e.g., -3 + 5).
+
+Error Handling  
+Detects:
+- Invalid syntax (e.g., 3+*5)
+- Mismatched parentheses
+- Incomplete expressions
+
+---------------------------------------
+
+Constraints
+
+- Operates on integers only.
+- Division results are evaluated using integer division (floor behavior).
+
+---------------------------------------
+
+How to Run
+
+Compile all Java files, then run:
+
+java Main
+
+---------------------------------------
+
+Example Test Cases
+
+Valid Expressions
+
+1. 3 + 4 * 2  
+Result: 11  
+
+2. (1+2)*(3+4)  
+Result: 21  
+
+3. ((3))  
+Result: 3  
+
+Invalid Expressions
+
+3+*5  
+3+(4-)
+
+---------------------------------------
+
+Program Output
+
+For every input, the program prints:
+
+• List of extracted tokens  
+• Syntax validation result  
+• Expression tree representation  
+• Final evaluated result  
